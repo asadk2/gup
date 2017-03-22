@@ -13,6 +13,15 @@
 
 Route::get('/', 'HomeController@home');
 
+Route::get('/adminView', function() {
+    //
+    return view('admin.index');
+});
+
 // Route::get('/', function () {
 //     return view('home');
 // });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
