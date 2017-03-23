@@ -15,7 +15,7 @@ class CreateCustomerDetailsTable extends Migration
     {
         Schema::create('customer_details', function (Blueprint $table) {
             // $table->increments('id');
-            $table->integer('customer_id')->references('customer_id')->on('customer');
+            $table->integer('id')->references('customer_id')->on('customer');
             $table->text('shipping_address');
             $table->integer('contact_number');
             // $table->timestamps();

@@ -15,7 +15,7 @@ Route::get('/', 'HomeController@home');
 
 Route::get('/adminView', function() {
     //
-    return view('admin.index');
+    return view('admin.product-list');
 });
 
 // Route::get('/', function () {
@@ -24,4 +24,9 @@ Route::get('/adminView', function() {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/home', 'HomeController@home');
+Route::get('/addProduct', function() {
+    //
+    return view('admin/add-product');
+});
+Route::post('/addProduct', 'ProductController@add');

@@ -15,7 +15,7 @@ class CreateProductDetailsTable extends Migration
     {
         Schema::create('product_details', function (Blueprint $table) {
             // $table->increments('id');
-            $table->integer('product_id')->references('product_id')->on('product');
+            $table->integer('id')->references('product_id')->on('product');
             $table->integer('theme_id')->references('theme_id')->on('themes');
             // $table->timestamps();
         });

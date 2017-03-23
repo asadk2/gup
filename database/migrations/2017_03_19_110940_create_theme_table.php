@@ -14,8 +14,10 @@ class CreateThemeTable extends Migration
     public function up()
     {
         Schema::create('theme', function (Blueprint $table) {
-            $table->increments('theme_id');
+            $table->increments('id');
             $table->string('theme_name');
+            $table->string('theme_image');
+            $table->string('theme_image_path');
             $table->timestamps();
         });
     }

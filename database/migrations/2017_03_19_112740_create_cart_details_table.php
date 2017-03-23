@@ -15,7 +15,7 @@ class CreateCartDetailsTable extends Migration
     {
         Schema::create('cart_details', function (Blueprint $table) {
             // $table->increments('id');
-            $table->integer('cart_id')->references('cart_id')->on('cart');
+            $table->integer('id')->references('cart_id')->on('cart');
             $table->integer('product_id')->references('product_id')->on('product');
             $table->integer('quantity');            
             // $table->timestamps();

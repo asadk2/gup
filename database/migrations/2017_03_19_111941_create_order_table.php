@@ -14,7 +14,7 @@ class CreateOrderTable extends Migration
     public function up()
     {
         Schema::create('order', function (Blueprint $table) {
-            $table->increments('order_id');
+            $table->increments('id');
             $table->integer('customer_id')->references('customer_id')->on('customer');
             $table->string('shipping_address');
             $table->string('payment type');
